@@ -10,15 +10,10 @@ interface CarouselCardProps {
 
 const FrontPageCarousel = (props: CarouselCardProps) => {
   return (
-    <div className="container-xl  --bs-theme-c3 fixed-height">
-      <div className="m-auto">
-        <button type="button" className="button">
-          For Workers
-        </button>
-        <button type="button" className="button">
-          For Employers
-        </button>
-      </div>
+    <div
+      id="fp-carousel"
+      className="container-xl mb-5 rounded-end-pill --bs-theme-c3 fixed-height"
+    >
       <div
         id="carouselExampleAutoplaying"
         className="carousel slide carouselContainer"

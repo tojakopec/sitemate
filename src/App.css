@@ -12,8 +12,11 @@
   background-color: #07031a;
 }
 
-body {
+#root {
+  background-color: #f4f6ff;
   margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
 }
 
 /* CAROUSEL */
@@ -50,4 +53,34 @@ body {
 .button:hover {
   border: 1px solid #fbd46d;
   color: #07031a;
+}
+
+.selected {
+  background-color: #fbd46d;
+}
+
+#header {
+  grid-area: 1 / 1 / 2 / 17;
+}
+
+#hero {
+  grid-area: 2 / 2/ 3 / 15;
+}
+
+#fp-carousel {
+  grid-area: 3 / 4 / 4 / 15;
+}
+
+#carouselButtonContainer {
+  grid-area: 3 / 5 / 4 / 5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  align-self: center;
+}
+
+#footerDiv {
+  grid-area: 5 / 1 / 6 / 17;
+  height: 200px;
 }

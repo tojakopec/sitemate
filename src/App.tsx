@@ -1,10 +1,14 @@
 import Header from "./components/Header";
 import "./App.css";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Hero from "./components/Hero";
 import FrontPageCarousel from "./components/FrontPageCarousel";
+import CarouselButton from "./components/CarouselButton";
+import Footer from "./components/Footer";
 
 function App() {
+  const [isEmployer, setIsEmployer] = useState(false);
+
   const CarouselCardDataEmployee = [
     {
       title: "Browse Jobs",
@@ -52,7 +56,22 @@ function App() {
         title="Get the right person for the job."
         subtitle="Hire skilled personnel with ease."
       />
-      <FrontPageCarousel props={CarouselCardDataEmployee} />
+      <FrontPageCarousel
+        props={isEmployer ? CarouselCardDataEmployer : CarouselCardDataEmployee}
+      />
+      <div id="carouselButtonContainer">
+        <CarouselButton
+          text="For Workers"
+          onClick={() => setIsEmployer(false)}
+          selected={!isEmployer}
+        />
+        <CarouselButton
+          text="For Employers"
+          onClick={() => setIsEmployer(true)}
+          selected={isEmployer}
+        />
+      </div>
+      <Footer />
     </Fragment>
   );
 }

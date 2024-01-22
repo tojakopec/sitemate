@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle }) => {
   }, []);
 
   return (
-    <div className="row px-5 pt-5 pb-5 mt-0 --bs-theme-c1">
+    <div id="hero" className="row px-5 pt-5 pb-5 mt-0 --bs-theme-c1">
       <img
         className=" col rounded-start-pill float-end w-100 h-100"
         src={image}
