@@ -15,3 +15,39 @@
 body {
   margin-top: 0;
 }
+
+/* CAROUSEL */
+
+.fixed-height {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.carouselContainer {
+  overflow: hidden;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+}
+
+.carousel-card {
+  width: 70%;
+  height: 100%;
+
+  margin: auto;
+}
+
+.button {
+  background: none;
+  padding: 10px 20px;
+  margin: 0 10px 0 10px;
+  border-radius: 10px;
+  border: rgba(0, 0, 0, 0) solid 1px;
+  color: #07031a;
+}
+
+.button:hover {
+  border: 1px solid #fbd46d;
+  color: #07031a;
+}
